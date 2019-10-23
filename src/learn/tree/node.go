@@ -4,18 +4,21 @@ import (
 	"fmt"
 )
 
-type TreeNode struct {
+type Node struct {
+	/**
+	  首字母大写 则访问权限为public
+	 */
 	Value       int
-	Left, Right *TreeNode
+	Left, Right *Node
 }
 
 //为结构定义方法 ， 类似func  print(node treeNode)
-func (node TreeNode) Print() {
+func (node Node) Print() {
 	fmt.Print(node.Value, " ")
 }
 
 //使用指针作为方法接受者
-func (node *TreeNode) Set(value int) {
+func (node *Node) Set(value int) {
 	if node == nil {
 		fmt.Println("node is nil")
 	} else {
@@ -23,7 +26,7 @@ func (node *TreeNode) Set(value int) {
 	}
 }
 
-func (node *TreeNode) Traverse() {
+func (node *Node) Traverse() {
 	if node == nil {
 		return
 	}
@@ -33,6 +36,13 @@ func (node *TreeNode) Traverse() {
 
 }
 
-func CreateTreeNode(value int) *TreeNode {
-	return &TreeNode{Value: value}
+func (node *Node) postOrder() {
+	if node == nil {
+		return
+	}
+	node.postOrder()
+}
+
+func CreateTreeNode(value int) *Node {
+	return &Node{Value: value}
 }
