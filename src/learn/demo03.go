@@ -48,5 +48,6 @@ func enums() {
 }
 
 func main() {
-
+	consts()
+	enums()
 }

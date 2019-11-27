@@ -55,5 +55,7 @@ func eval(a, b int, op string) int {
 	return value
 }
 func main() {
+	readFile()
+	readFileShorter()
 	fmt.Print(eval(1, 2, "+"))
 }
