@@ -26,6 +26,7 @@ func deadLoop() {
 
 // Go 没有while，循环全部用 for，for的三个组件都可以省略
 func printFile(filename string) {
+	//xcode-select -- install
 	// 打开文件
 	file, err := os.Open(filename)
 	// 如果出错，结束进程
