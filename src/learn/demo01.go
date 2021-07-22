@@ -41,6 +41,7 @@ func variableTypeDeduction() {
 // 最简定义变量方式
 func variableShorter() {
 	a, b, c, d := 3, 2, true, "hi"
+	b = 5
 	fmt.Println(a, b, c, d)
 }
 
