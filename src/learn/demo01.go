@@ -39,6 +39,7 @@ func variableTypeDeduction() {
 }
 
 // 最简定义变量方式
+//:= 只能在函数内使用
 func variableShorter() {
 	a, b, c, d := 3, 2, true, "hi"
 	b = 5

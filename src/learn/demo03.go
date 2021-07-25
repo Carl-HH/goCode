@@ -21,7 +21,7 @@ import (
 func consts() {
 	// 指定类型
 	const filename string = "filename-const"
-	// 不指定类型，表示类型不定
+	// 不指定类型，表示类型不定 （const数值可以用当各种类型来用）
 	const a, b = 3, 4
 	var c int
 	// 由于类型不定，所以这里不需要强转，如果定义为 const a, b int = 3, 4，则需要强转
