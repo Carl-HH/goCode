@@ -42,6 +42,7 @@ func readFileShorter() {
 switch：默认自带break，如果想穿下去执行，使用 fallthrough
 */
 // switch 默认自带break，如果想穿下去执行，使用 fallthrough
+
 func eval(a, b int, op string) int {
 	var value int
 	switch op {
@@ -54,8 +55,22 @@ func eval(a, b int, op string) int {
 	}
 	return value
 }
+
+/**
+switch后也可以不跟表达式
+*/
+func grade(score int) string {
+	switch {
+	case score < 60:
+		return "F"
+	default:
+		return "A"
+	}
+}
+
 func main() {
 	readFile()
 	readFileShorter()
 	fmt.Print(eval(1, 2, "+"))
+	grade(80)
 }

@@ -3,6 +3,15 @@ package main
 import "fmt"
 
 /**
+数组
+ var array1 [5] int
+ array2 := [3]int{1,2,3}
+ array3 :=[...]int{2,4,6,8}
+ var grid [4][5]int
+
+ for i,v : = range array3 {...}
+*/
+/**
 tips:
 	1.一个函数最多只能有一个可变参数
 	2.参数列表中还有其他类型的参数，则可变参数写在所有参数的最后

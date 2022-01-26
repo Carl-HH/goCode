@@ -44,3 +44,10 @@ func printFile(filename string) {
 func main() {
 	printFile("abc.txt")
 }
+
+/**
+for, if 后面都条件没有括号
+if条件里也可以定义变量
+没有while
+switch不需要break，也可以直接switch多个条件
+*/

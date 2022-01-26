@@ -7,7 +7,7 @@ import (
 type Node struct {
 	/**
 	  首字母大写 则访问权限为public
-	 */
+	*/
 	Value       int
 	Left, Right *Node
 }
@@ -17,7 +17,8 @@ func (node Node) Print() {
 	fmt.Print(node.Value, " ")
 }
 
-//使用指针作为方法接受者
+//使用指针作为方法接受者,只有使用指针才可以改变结构内容
+//nil指针也可以调用方法
 func (node *Node) Set(value int) {
 	if node == nil {
 		fmt.Println("node is nil")
